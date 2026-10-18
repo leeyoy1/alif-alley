@@ -92,7 +92,7 @@ body {
 		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
-<style>html,body{margin:0;height:100%;background:#1f160d;overflow:hidden;display:flex;align-items:center;justify-content:center}#canvas{display:block;width:min(100vw,56.25vh)!important;height:min(100vh,177.78vw)!important}</style>
+<style>html,body{margin:0;width:100%;height:100%;background:#1f160d;overflow:hidden;touch-action:none}#canvas{display:block;position:fixed;left:50%;top:0;transform:translateX(-50%)}</style><script>(function(){function fit(){var c=document.getElementById('canvas');if(!c)return;var vv=window.visualViewport;var W=vv?vv.width:window.innerWidth;var H=vv?vv.height:window.innerHeight;var w=W,h=H;if(W/H>0.5625){w=Math.round(H*0.5625);}var d=Math.min(window.devicePixelRatio||1,3);c.style.width=w+'px';c.style.height=h+'px';var bw=Math.round(w*d),bh=Math.round(h*d);if(c.width!==bw)c.width=bw;if(c.height!==bh)c.height=bh;}window.__fitCanvas=fit;window.addEventListener('resize',fit);window.addEventListener('orientationchange',function(){setTimeout(fit,200);});if(window.visualViewport)window.visualViewport.addEventListener('resize',fit);document.addEventListener('DOMContentLoaded',fit);setInterval(fit,1000);})();</script>
 	</head>
 	<body>
 		<canvas id="canvas">
@@ -111,7 +111,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":1,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":40626400,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":0,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":40626400,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
